@@ -1,24 +1,7 @@
-# task6
+# Used packages: <br>
+Vuelidate,
+bootstrap-vue <br>
 
-## Project setup
-```
-yarn install
-```
+# If any problems with building an app:
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Check via this link https://quizzical-swartz-468e20.netlify.app/
