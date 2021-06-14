@@ -2,7 +2,7 @@
   <div class="rating">
     <p>Rate us</p>
     <b-form-rating
-      @click="emitToParent"
+      @change="emitToParent"
       v-model="value"
       variant="warning"
       class="mb-1 rating"
@@ -16,17 +16,13 @@
 <script>
 export default {
   name: "Rating",
-  // props: {
-  //   value: Object,
-  // },
   data: () => {
     return {
-      value: "",
+      value: "0",
     };
   },
   methods: {
     emitToParent() {
-      console.log("this.value");
       this.$emit("childToParent", this.value);
     },
   },

@@ -80,8 +80,7 @@ export default {
       name: "",
       email: "",
       comment: "",
-      value: "0",
-      fromChild: "",
+      fromChild: "0",
     };
   },
   validations: {
@@ -103,7 +102,7 @@ export default {
         body: JSON.stringify({
           name: this.name,
           email: this.email,
-          rating: this.value,
+          rating: this.fromChild,
           comment: this.comment,
         }),
       };
