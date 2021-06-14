@@ -36,7 +36,7 @@
           Please paste correct email address.
         </div>
       </div>
-      <Rating />
+      <Rating v-on:childToParent="onChildClick" />
       <!-- <div class="rating">
         <p>Rate us</p>
         <b-form-rating
@@ -81,6 +81,7 @@ export default {
       email: "",
       comment: "",
       value: "0",
+      fromChild: "",
     };
   },
   validations: {
@@ -116,6 +117,10 @@ export default {
     },
     validationStatus: function (validation) {
       return typeof validation != "undefined" ? validation.$error : false;
+    },
+    onChildClick(value) {
+      console.log(value);
+      this.fromChild = value;
     },
   },
 };

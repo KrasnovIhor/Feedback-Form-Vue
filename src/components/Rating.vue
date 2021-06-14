@@ -2,6 +2,7 @@
   <div class="rating">
     <p>Rate us</p>
     <b-form-rating
+      @click="emitToParent"
       v-model="value"
       variant="warning"
       class="mb-1 rating"
@@ -15,17 +16,30 @@
 <script>
 export default {
   name: "Rating",
+  // props: {
+  //   value: Object,
+  // },
   data: () => {
     return {
-      value: "0",
+      value: "",
     };
+  },
+  methods: {
+    emitToParent() {
+      console.log("this.value");
+      this.$emit("childToParent", this.value);
+    },
   },
 };
 </script>
 
-<style scoped>
+<style>
 .rating {
   border: unset;
+}
+.rating svg {
+  width: 50px !important;
+  height: 47px !important;
 }
 .b-rating {
   background: transparent;
@@ -36,5 +50,6 @@ export default {
 svg {
   width: 50px !important;
   height: 47px !important;
+  cursor: pointer;
 }
 </style>
