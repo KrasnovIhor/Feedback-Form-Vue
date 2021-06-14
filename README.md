@@ -1,3 +1,3 @@
-Used packages:
-Vuelidate
-bootstrap-vue
+#Used packages: <br>
+Vuelidate,
+bootstrap-vue <br>
