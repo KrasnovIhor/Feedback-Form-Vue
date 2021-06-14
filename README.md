@@ -1,6 +1,7 @@
 # Used packages: <br>
 Vuelidate,
-bootstrap-vue <br>
+bootstrap-vue, 
+core-js
 
 # If any problems with building an app:
 
