@@ -37,18 +37,6 @@
         </div>
       </div>
       <Rating v-on:childToParent="onChildClick" />
-      <!-- <div class="rating">
-        <p>Rate us</p>
-        <b-form-rating
-          v-model="value"
-          variant="warning"
-          class="mb-1 rating"
-          size="lg"
-        ></b-form-rating>
-      </div> -->
-      <!-- <div class="mb-4">
-        <span class="mb-4">{{ value }} of 5</span>
-      </div> -->
       <div class="mb-5">
         <textarea
           :class="{ 'is-invalid': validationStatus($v.comment) }"
@@ -94,8 +82,6 @@ export default {
 
       if (this.$v.$pending || this.$v.$error) return;
 
-      console.log(Rating);
-
       const requestOptions = {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -118,7 +104,6 @@ export default {
       return typeof validation != "undefined" ? validation.$error : false;
     },
     onChildClick(value) {
-      console.log(value);
       this.fromChild = value;
     },
   },
